@@ -1,5 +1,4 @@
 html,body{
-	border:1px solid black;
 	height:99%;
 	background-color:black;
 	color:white;
@@ -25,7 +24,6 @@ img{
 }
 
 .main{
-	border:1px solid red;
 	padding:10px;
 	grid-gap:10px;
 	height:100%;
