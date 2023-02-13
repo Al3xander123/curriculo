@@ -1,101 +1,63 @@
-body{
-	margin: 0px;
-	padding:10px;
+/*primero para dispositivos moviles*/
+html,body{
+	display:flex;
+	background-color:black;
+	color:white;
+	font-family:monospace;}
+
+img{
+	max-width:100px;
+	height:auto;
 }
 
-*{box-sizing: border-box;}
+*{box-sizing:border-box;}
 
 .row::after{
 	content:"";
 	clear:both;
 	display:table;
 }
+.main{grid-gap:10px;padding:10px;}
+.header{border:1px solid white;margin-bottom:10px;}
+.col-1{border:1px solid white;margin-bottom:10px;display:grid;place-items:center;}
+.col-2{border:1px solid white;margin-bottom:10px;}
+.col-3{border:1px solid white;margin-bottom:10px;}
+.col-4{border:1px solid white;margin-bottom:10px;}
+.col-5{border:1px solid white;margin-bottom:10px;}
+.footer{border:1px solid white;margin-bottom:10px;}
 
-.header,.footer{
-	width:100%;
+/*
+*{writting-mode:;
 }
+*/
 
-
-div{
-	border:1px solid black;
-}
-
-img{
-	max-width: 100px;
-	height:auto;
-}
-
-
-.curriculo{
-	border:1px solid white;
-	padding:20px;
-	display:grid;
-	place-items:center;
-	margin-bottom:10px;
-}
-
-.imagen{
-	border:1px solid white;
-	padding:20px;
-	display:grid;
-	place-items:center;
-	margin-bottom:10px;
-}
-.datos{
-	border:1px solid white;
-	padding:20px;
-	margin-bottom:10px;
-/*	height:100%;*/
-}
-.estudios{
-	border:1px solid white;
-	padding:15px;
-	margin-bottom:10px;
-}
-.experiencia{
-	border:1px solid white;
-	padding:15px;
-	margin-bottom:10px;
-}
-.footer{
-	border:1px solid white;
-	padding:15px;
-	margin-bottom:10px;
-}
-
-
-
+.header,.footer{display:grid;place-items:center;padding:10px;margin-bottom:10px;}
+/*
+.col-1{width:25%;}
+.col-2{width:75%;}
+*/
 [class*="col"]{
 	float:left;
-}
-
-/*Primero para dispositivos moviles*/
-[class*="col"]{
 	width:100%;
+	padding:10px;
 }
 
-body{background-color:black;
-color:white;
-font-family:monospace;}
-
-.main{
-	min-width:170px;
+@media only screen and (max width:500px){
+[class="col-"]{
+width:100%;	
+}
 }
 
-.col-2{
-	min-height:auto-fit;
-	/*border:1px solid red;*/
-	/*height:175px;*/
-}
-
-
-
-/*segundo computadoras de escritorio*/
-@media only screen and (min-width:600px){
-	.col-1{width:25%;}
-	.col-2{width:75%; height:175px;}
-	.datos{height:100%;}
-	.col-3{width:100%;}
-	.col-4{width:100%;}
-	.imagen{margin-right:10px;}
+/*segundo para computadoras de escritorio*/
+@media only screen and (min-width:500px){
+	body{background-color:white;color:black;}
+/*.main{padding:10px;}*/
+.header{border:1px solid black;}
+.foto_datos{display:flex; grid-gap:10px;}
+.col-1{border:1px solid black;width:25%;}
+.col-2{border:1px solid black;width:75%;}
+.col-3{border:1px solid black;}
+.col-4{border:1px solid black;}
+.col-5{border:1px solid black;}
+.footer{border:1px solid black;}
 }
